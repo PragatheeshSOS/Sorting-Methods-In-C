@@ -1,0 +1,58 @@
+//INSERTION SORT...
+
+#include<stdio.h>
+
+int main()
+{
+    int n,i,j,k,t;
+    printf("Enter Limit: ");
+    scanf("%d",&n);
+    
+    int a[n];
+    printf("Enter Elements: ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+    for(i=0;i<n;i++)
+    {
+        for(j=i;j>0;j--)
+        {
+            if(a[j]<a[j-1])
+            {
+                t = a[j];
+                a[j] = a[j-1];
+                a[j-1] = t;
+            }
+        }
+        
+        for(k=0;k<n;k++)
+        {
+            printf("%d ",a[k]);
+        }
+        printf("\n");
+    }
+}
+
+//Code By Pragatheesh.S (github.com/PragatheeshSOS)
+
+/*
+
+
+INPUT:
+8
+20 40 3 11 80 15 8 10
+
+OUTPUT:
+20 40 3 11 80 15 8 10
+20 40 3 11 80 15 8 10
+3 20 40 11 80 15 8 10
+3 11 20 40 80 15 8 10
+3 11 20 40 80 15 8 10
+3 11 15 20 40 80 8 10
+3 8 11 15 20 40 80 10
+3 8 10 11 15 20 40 80
+
+
+*/
